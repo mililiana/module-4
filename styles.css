@@ -1,0 +1,75 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu-section {
+    margin: 20px;
+    position: relative; /* Enable positioning for absolute positioning */
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: yellow;
+}
+
+.section-content {
+    font-size: 16px;
+    background-color: #ccc;
+    padding: 10px;
+    margin-top: 30px; /* Add margin top to create space for section title */
+}
+
+
+
+/* Desktop View (992px and above) */
+@media only screen and (min-width: 992px) {
+    .menu-section {
+        width: 33.33%; /* Each section takes up one-third of the screen */
+        float: left;
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu-section {
+        width: 50%; /* Each section takes up half of the screen */
+        float: left;
+    }
+
+    /* The third section takes up the entire row */
+    .menu-section:nth-child(3) {
+        width: 100%;
+        clear: both; /* Clear float to start a new row */
+    }
+}
+
+/* Mobile View (767px and below) */
+@media only screen and (max-width: 767px) {
+    .menu-section {
+        width: 100%; /* Each section takes up the entire row */
+        float: none; /* Clear float for mobile layout */
+    }
+}
+
+
+/* Additional Styles */
+@media only screen and (min-width: 601px) {
+    .section-content {
+        padding-top: 40px; /* Increase padding top to create space between yellow rectangle and text */
+    }
+}
